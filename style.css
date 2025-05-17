@@ -1,0 +1,339 @@
+:root {
+  --primary-color: #1a1a1a;
+  --accent-color: #e63946;
+  --text-color: #f1f1f1;
+  --card-bg: #2c2c2c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-image: url(./freepik__the-style-is-candid-image-photography-with-natural__8205.png);
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--primary-color);
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  border: 1px solid var(--accent-color);
+  padding: 10px;
+  z-index: 3;
+}
+
+.menu-mobile.active {
+  display: flex;
+}
+
+.menu-mobile a {
+  margin: 10px 0;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.hero {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  animation: pulse 1.5s infinite;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+.services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 30px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  animation: fadeInUp 1.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.service-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.service-description {
+  font-size: 16px;
+}
+
+/* Estilos para o formulário de agendamento */
+.booking {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1.5s ease;
+}
+
+.booking h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.booking input,
+.booking select,
+.booking textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #333;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.booking input:focus,
+.booking select:focus,
+.booking textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.booking textarea {
+  height: 100px;
+}
+
+.booking button {
+  padding: 15px 25px;
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.booking button:hover {
+  background-color: #d32f2f;
+}
+
+/* Seção de Contato */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+}
+
+.contact-item h3 {
+  font-size: 24px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+

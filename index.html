@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WS Lava Jato</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">WS Lava Jato</div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#agendamento">Agendar</a>
+      
+     
+    </nav>
+    <div class="hamburger" onclick="toggleMenu(this)" aria-label="Abrir menu de navegação">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu-mobile" id="menuMobile">
+      <a href="#">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#agendamento">Agendar</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Deixe sua moto brilhando com a WS Lava Jato</h1>
+      <p>Atendimento rápido, eficiente e com qualidade garantida!</p>
+      <a class="whatsapp-btn" href="https://wa.me/5585992448224" target="_blank">
+  Fale conosco no WhatsApp
+</a>
+
+      </a>
+    </section>
+
+    <section class="services" id="servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="service-list">
+        <div class="service-card">
+          <div class="service-icon">🧼</div>
+          <div class="service-title">Lavagem Simples</div>
+          <div class="service-description">
+            Limpeza rápida e eficiente para manter sua moto limpa no dia a dia.
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <div class="service-title">Lavagem Completa</div>
+          <div class="service-description">
+            Higienização detalhada com polimento e finalização premium.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="agendamento">
+      <h2>Agende Seu Atendimento</h2>
+      <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="nome" placeholder="Seu nome" required />
+        <input type="tel" id="telefone" placeholder="Seu telefone" required />
+        <select id="servico" required>
+          <option value="">Selecione o serviço</option>
+          <option value="Lavagem Simples">Lavagem Simples</option>
+          <option value="Lavagem Completa">Lavagem Completa</option>
+        </select>
+        <input type="date" id="data" required />
+        <textarea id="observacoes" placeholder="Alguma observação? (opcional)"></textarea>
+        <button type="submit" class="whatsapp-btn">Agendar via WhatsApp</button>
+      </form>
+    </section>
+
+    <!-- Seção de Contato com Horário e Endereço -->
+    <section class="contact-info" id="contato">
+      <div class="contact-item">
+        <h3>Horário de Funcionamento</h3>
+        <p>Segunda a Domingo: 08:00 - 17:00</p>
+      </div>
+      <div class="contact-item">
+        <h3>Endereço</h3>
+        <p>Rua Puebla, 869 - Potira 2</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+                                  
+
+                               
+
+
+
+
+
+
+                               
+
+                               
+        
